@@ -6,9 +6,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os, re
 
-# 配置字体（SimHei 为黑体，可以换成其他字体）
-plt.rcParams['font.sans-serif'] = ['SimHei']   # 指定默认字体
-plt.rcParams['axes.unicode_minus'] = False     # 解决负号 '-' 显示为方块的问题
+plt.rcParams['font.sans-serif'] = ['SimHei']   
+plt.rcParams['axes.unicode_minus'] = False     
 
 class FpPair:
     def __init__(self, row) -> None:
@@ -153,31 +152,24 @@ class OnlineMatch:
         输入：从一条无序的results，[]
         输出：最长连续区间，[]
         '''
-        # 按 start_index 排序
         results.sort(key=lambda x: (x['idx'], x['start_index']))
 
-        # 初始化结果列表
         all_intervals = []
 
-        # 处理每个区间
         for result in results:
             placed = False
             for interval in all_intervals:
-                # 检查是否与当前子列表中的任何区间连续
                 if result['idx'] == interval[-1]['idx'] + 1 and result['start_index'] == interval[-1]['end_index'] + 1:
                     interval.append(result)
                     placed = True
                     # break
 
-            # 如果不连续，创建新的子列表
             if not placed:
                 all_intervals.append([result])
 
-        # 找到包含最多连续区间的子列表->如果有两个可以用函数处理
         longest_interval = max(all_intervals, key=len)
         return longest_interval
 
-    # 返回intervals中长度最长的列表Interval
     def find_longest_intervals(self, all_intervals):
         '''
         输入：匹配结果区间，[None, [], None,[]...]
@@ -233,61 +225,47 @@ def plot_box(data, filename):
     输入：统计数据字典
     输出：箱图
     '''
-    # 设置图形的尺寸
     plt.figure(figsize=(12, 8))
 
-    # 将数据转换为列表以便绘图
     categories = list(data.keys())
     values = list(data.values())
 
-    # 绘制箱线图
     sns.boxplot(data=values, showfliers=False)
 
-    # 设置x轴标签
     plt.xticks(range(len(categories)), categories)
 
-    # 添加标题和y轴标签
     plt.title('Box Plot of Categories')
     plt.ylabel('Values')
 
-    # 保存图像并自动调整边距
     plt.savefig(filename) #, bbox_inches='tight'
     print(f"图像已保存到 {filename}")
 
 def plot_bar(counter, filename, title):
-    # 提取组合及其出现次数
     combinations = list(counter.keys())
     counts = list(counter.values())
 
-    # 绘制条形图
     plt.figure(figsize=(10, 6))
     plt.bar(combinations, counts, color='skyblue')
 
-    # 添加标题和标签
     plt.title(title)
     plt.xlabel('组合')
     plt.ylabel('出现次数')
 
-    # 显示图形
     plt.xticks(rotation=45)  # 旋转 x 轴标签以便更好地展示
     plt.tight_layout()  # 自动调整布局
 
-    # 保存图像并自动调整边距
     plt.savefig(filename) #, bbox_inches='tight'
     print(f"图像已保存到 {filename}")
 
 
 def plot_pie(counter, filename, title):
-    # 提取组合及其出现次数
     combinations = list(counter.keys())
     counts = list(counter.values())
 
     plt.figure(figsize=(8, 8))
     plt.pie(counts, labels=combinations, autopct='%1.1f%%', startangle=140, colors=plt.get_cmap('tab20').colors)
 
-    # 添加标题
     plt.title(title)
-    # 保存图像并自动调整边距
     plt.savefig(filename) #, bbox_inches='tight'
     print(f"图像已保存到 {filename}")
 
