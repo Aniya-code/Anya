@@ -2,7 +2,8 @@
 # Unveiling the Unseen: A Novel Video Identification Attack on Media Multiplexing
 ## Attack process of Anya
 
-![image](https://github.com/user-attachments/assets/4644cceb-45d2-452e-a05f-29743ebd6943)
+
+![image](https://github.com/user-attachments/assets/0fbc482b-7eca-4678-a003-cbb4d5b26cac)
 
 
 
@@ -28,7 +29,8 @@ Our approach involves two steps: **fingerprint fusion** and **fuzzy search**. Fi
 
 - The fused fingerprint needs to be converted into a prefix-sum sequence. Then Using scaling factors to obtain scaled prefixes and sequences and storing it in a hashmap. The implementation details of fuzzy search are shown in the following figure:
   
-![image](https://github.com/user-attachments/assets/de41672a-6ede-4298-bf3f-6385fd6e0fc2)
+![image](https://github.com/user-attachments/assets/95031141-2414-4e58-8f91-e0ee2fd4c76b)
+
 
 
 
