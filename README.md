@@ -29,7 +29,7 @@ Our approach involves two steps: **fingerprint fusion** and **fuzzy search**. Fi
 
 - The fused fingerprint needs to be converted into a prefix-sum sequence. Then Using scaling factors to obtain scaled prefixes and sequences and storing it in a hashmap. The implementation details of fuzzy search are shown in the following figure:
   
-![image](https://github.com/user-attachments/assets/95031141-2414-4e58-8f91-e0ee2fd4c76b)
+![image](https://github.com/user-attachments/assets/973f0745-aa1a-4c35-9d2b-6c3d51708806)
 
 
 
