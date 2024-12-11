@@ -7,8 +7,8 @@ file2 = pd.read_csv(r'data\fingerprint\yt_fp_for_test.csv', header=0)
 print("File1 Columns:", file1.columns)
 print("File2 Columns:", file2.columns)
 
-# 定义要替换的URL ID范围 00000000000 到 00000000299
-new_ids = [f'{i:011d}' for i in range(300)]  # 0 到 299 的11位数
+# 定义要替换的URL ID范围 如00000000000 到 00000000999
+new_ids = [f'{i:011d}' for i in range(999)]  # 0 到 999 的11位数
 
 for idx, new_id in enumerate(new_ids):
     old_url = file1.iloc[idx, 0]  # 因为第一行是表头，所以从第二行开始
