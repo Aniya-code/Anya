@@ -36,7 +36,7 @@ Our approach involves two steps: **fingerprint fusion** and **fuzzy search**. Fi
 
 
 
-## The code organization for each section is as follows:
+## The code for each section is organized as follows:
 - `src\extract_fingreprint` : fingerprint collection and processing
 
 - `src\match` : attack method
