@@ -1,19 +1,19 @@
 
 # Anya: A Novel Video Identification Attack on Media Multiplexing
 ## Motivation
-In this paper, we reveal the recent technological advancements of YouTube, as shown in the following figure. 
+In this paper, we revealed the recent technological advancements of YouTube, as shown in the following figure. 
 <div align=center>
 <img width="504" alt="image" src="https://github.com/user-attachments/assets/86058a47-0e8a-44ae-9a5d-493b9e1ae54b" />
 </div>
 
 - In the latest stage, YouTube abandoned the strategy of separating audio and video content into two tracks for content delivery, and instead adopted a new transmission technology that dynamically combine audio and video segments in one track, called **media multiplexing**.
 
-- Faced with the challenges brought by new transmission technologies, we propose **Anya**, a novel attack method that can achieve high accuracy and efficiency in online attack scenario.
+- Faced with the challenges brought by new transmission technologies, we proposed **Anya**, a novel attack method that can achieve high accuracy and efficiency in online attack scenario.
 
 ## Attack process of Anya
 
 <div align=center>
-<img width="573" alt="image" src="https://github.com/user-attachments/assets/3e784097-c51f-43d3-9280-eb23ebeba982" />
+<img width="653" alt="image" src="https://github.com/user-attachments/assets/3e784097-c51f-43d3-9280-eb23ebeba982" />
 </div>
 
 
@@ -37,13 +37,13 @@ Our approach involves two steps: **fingerprint fusion** and **fuzzy search**. Fi
 - We found that video segments and audio segments meet the following time constraints in transmission. Aligning the end times of video segments with the start times of audio segments on the same timeline. This mapped time sequence is used to establish the order for fused fingerprints.
 
 <div align=center>
-<img width="470" alt="image" src="https://github.com/user-attachments/assets/b40decb4-4336-42b2-bab6-d28f486e4f5d" />
+<img width="490" alt="image" src="https://github.com/user-attachments/assets/b40decb4-4336-42b2-bab6-d28f486e4f5d" />
 </div>
 
 - The fused fingerprint needs to be converted into a prefix-sum sequence. Then Using scaling factors to obtain scaled prefixes and sequences and storing it in a hashmap. The implementation details of fuzzy search are shown in the following figure:
 
 <div align=center>
-<img width="422" alt="image" src="https://github.com/user-attachments/assets/8bdd652e-0098-4bf9-ab03-0047b92c77aa" />
+<img width="482" alt="image" src="https://github.com/user-attachments/assets/8bdd652e-0098-4bf9-ab03-0047b92c77aa" />
 </div>
 
 
