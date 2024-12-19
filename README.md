@@ -3,7 +3,8 @@
 ## Motivation
 In this paper, we reveal the recent technological advancements of YouTube, as shown in the following figure. YouTube abandoned the strategy of separating audio and video content into two tracks for content delivery, and instead adopted a new transmission technology that dynamically combine audio and video segments in one track, called media multiplexing.
 
-<img width="664" alt="image" src="https://github.com/user-attachments/assets/b0eb84b1-037d-470d-bc0e-39f2d366eaaf" />
+<img width="397" alt="image" src="https://github.com/user-attachments/assets/6938bbd4-5d6b-4bc7-8830-9f39251af460" />
+
 
 Faced with the challenges brought by new transmission technologies, we propose Anya, a novel attack method that can achieve high accuracy and efficiency in online attack scenario.
 
@@ -33,7 +34,8 @@ Our approach involves two steps: **fingerprint fusion** and **fuzzy search**. Fi
 
 - The fused fingerprint needs to be converted into a prefix-sum sequence. Then Using scaling factors to obtain scaled prefixes and sequences and storing it in a hashmap. The implementation details of fuzzy search are shown in the following figure:
   
-![image](https://github.com/user-attachments/assets/973f0745-aa1a-4c35-9d2b-6c3d51708806)
+<img width="369" alt="image" src="https://github.com/user-attachments/assets/79a68b42-80c3-45a4-b354-45169b565f9c" />
+
 
 
 
