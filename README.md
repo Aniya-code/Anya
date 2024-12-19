@@ -1,11 +1,14 @@
 
 # Anya: A Novel Video Identification Attack on Media Multiplexing
+## Motivation
+In this paper, we reveal the recent technological advancements of YouTube, as shown in the following figure. YouTube abandoned the strategy of separating audio and video content into two tracks for content delivery, and instead adopted a new transmission technology that dynamically combine audio and video segments in one track, called media multiplexing.
+
+<img width="664" alt="image" src="https://github.com/user-attachments/assets/b0eb84b1-037d-470d-bc0e-39f2d366eaaf" />
+
+Faced with the challenges brought by new transmission technologies, we propose Anya, a novel attack method that can achieve high accuracy and efficiency in online attack scenario.
+
 ## Attack process of Anya
-
-
 ![image](https://github.com/user-attachments/assets/0fbc482b-7eca-4678-a003-cbb4d5b26cac)
-
-
 
 
 #### Step1: Audio-Video Fingerprint Extraction
